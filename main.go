@@ -22,7 +22,6 @@ func main() {
 		return c.SendString("server is running successfully")
 	})
 
-	fmt.Println(cfg.PORT)
 	fmt.Print(db.Name())
 	log.Fatal(app.Listen(":8000"))
 }
