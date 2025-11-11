@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 type User struct {
@@ -39,4 +40,8 @@ type Address struct {
 	IsDefault bool               `bson:"isDefault,omitempty" json:"isDefault"`
 	CreatedAt time.Time          `bson:"createdAt,omitempty" json:"createdAt"`
 	UpdatedAt time.Time          `bson:"updatedAt,omitempty" json:"updatedAt"`
+}
+
+type UserStore struct {
+	Col *mongo.Collection
 }
